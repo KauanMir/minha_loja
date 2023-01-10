@@ -7,15 +7,14 @@
     {% from "_formularioajuda.html" import render_field %}
 <form method="post" ectype="multipart/form-data">
   <div>
-    {{ render_field(form.nome) }}
-    {{ render_field(form.usuario) }}
-    {{ render_field(form.email) }}
-    {{ render_field(form.senha) }}
-    {{ render_field(form.confirmacao) }}
-    {{ render_field(form.accept_tos) }}
-    <input type="file" name="photo">
+    {{ render_field(form.name, class="form-control") }}
+    {{ render_field(form.username, class="form-control") }}
+    {{ render_field(form.email, class="form-control") }}
+    {{ render_field(form.password, class="form-control") }}
+    {{ render_field(form.confirm, class="form-control") }}
+    <input type="file" name="Foto">
   </div>
-  <p><input type=submit value="Registrar" class="btn btn-info"></p>
+  <p><input type="submit" value="Registrar" class="btn btn-success mt-2"></p>
 </form>
 </div>
 {% endblock content %}
